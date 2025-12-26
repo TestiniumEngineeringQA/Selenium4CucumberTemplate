@@ -1,7 +1,7 @@
 [
   {
     "key": "txtInput",
-    "value": "username",
+    "value": "login-email-input",
     "type": "id"
   },
   {
