@@ -18,8 +18,8 @@ import java.util.Map;
 public class Hooks {
 
     // Fallback; property/env yoksa buna düşer
-    //private final String defaultHub = "http://host.docker.internal:4444/wd/hub";
-    private final String defaultHub = "http://hub-devcluster.testinium.io:4444/wd/hub";
+    private final String defaultHub = "http://host.docker.internal:4444/wd/hub";
+    //private final String defaultHub = "http://hub-devcluster.testinium.io:4444/wd/hub";
 
     protected static WebDriver driver;
     protected static Actions actions;
