@@ -10,7 +10,7 @@ Feature: Online Process
   Scenario: deneme01
     * "https://www.amazon.com.tr/" sayfasina git
     * 2 saniye bekle
-    * "logo" elementine tikla
+    * "logoerror" elementine tikla
     * 2 saniye bekle
     * "search" elementine tikla
 
@@ -19,7 +19,7 @@ Feature: Online Process
   Scenario: deneme02
     * "https://www.amazon.com.tr/" sayfasina git
     * 2 saniye bekle
-    * "searchbar" elementine tikla
+    * "searchbarerror" elementine tikla
     * 2 saniye bekle
     * "searchbar" elementine "telefon" degerini yaz
     * 2 saniye bekle
