@@ -5,20 +5,21 @@ import com.testinium.helper.StoreHelper;
 import com.testinium.model.ElementInfo;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 
-@Slf4j
 public class Steps {
 
     private static final int TIMEOUT_SEC = 30;
     private static final int POLL_MS = 150;
 
+    private Logger log = LoggerFactory.getLogger(getClass());
     private final WebDriver driver;
     private final Actions actions;
     private final WebDriverWait wait;
