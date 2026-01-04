@@ -19,7 +19,7 @@ public class Hooks {
     private static Actions actions;
 
     @BeforeAll
-    public static void beforeAll() throws Exception {
+    public static void setUp() throws Exception {
         String gridUrl = System.getProperty("hubURL", DEFAULT_HUB);
         String testiniumKey = System.getenv("TESTINIUM_KEY");
 
@@ -41,7 +41,7 @@ public class Hooks {
     }
 
     @AfterAll
-    public static void afterAll() {
+    public static void tearDown() {
         if (driver != null) {
             driver.quit();
             driver = null;
