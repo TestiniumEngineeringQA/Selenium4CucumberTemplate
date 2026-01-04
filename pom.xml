@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.testinium</groupId>
-  <artifactId>cucumberTestinium</artifactId>
-  <version>1.0-SNAPSHOT</version>
+    <groupId>com.testinium</groupId>
+    <artifactId>cucumberTestinium</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
     <distributionManagement>
         <repository>
@@ -21,80 +21,77 @@
         </repository>
     </repositories>
 
-  <properties>
-    <!-- VERSIONS -->
-    <maven.complier.version>3.7.0</maven.complier.version>
-    <java.version>21</java.version>
-    <selenium.java.version>4.25.0</selenium.java.version>
-    <commons.lang3.version>3.5</commons.lang3.version>
-    <cucumber.junit.version>6.8.1</cucumber.junit.version>
-    <cucumber.java8.version>6.8.1</cucumber.java8.version>
-    <logback.version>1.2.3</logback.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <grovvy.all.version>2.4.13</grovvy.all.version>
-    <!-- VERSIONS -->
-  </properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-  <dependencies>
+        <java.version>21</java.version>
+        <selenium.java.version>4.25.0</selenium.java.version>
+        <commons.lang3.version>3.5</commons.lang3.version>
 
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>${selenium.java.version}</version>
-    </dependency>
+        <cucumber.version>7.14.0</cucumber.version>
 
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-lang3</artifactId>
-      <version>${commons.lang3.version}</version>
-    </dependency>
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+    </properties>
 
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-junit</artifactId>
-      <version>${cucumber.junit.version}</version>
-      <scope>test</scope>
-    </dependency>
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.java.version}</version>
+        </dependency>
 
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-java</artifactId>
-      <version>${cucumber.java8.version}</version>
-      <scope>test</scope>
-    </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons.lang3.version}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
 
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <version>${logback.version}</version>
-    </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
 
-    <dependency>
-      <groupId>org.codehaus.groovy</groupId>
-      <artifactId>groovy-all</artifactId>
-      <version>${grovvy.all.version}</version>
-    </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.42</version>
+            <scope>provided</scope>
+        </dependency>
 
-      <dependency>
-          <groupId>com.testinium</groupId>
-          <artifactId>testinium-selenium4-driver</artifactId>
-          <version>0.0.0.30-SNAPSHOT</version>
-      </dependency>
-  </dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.13</version>
+        </dependency>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
-        <configuration>
-          <encoding>UTF-8</encoding>
-          <source>14</source>
-          <target>14</target>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+        <dependency>
+            <groupId>com.testinium</groupId>
+            <artifactId>testinium-selenium4-driver</artifactId>
+            <version>0.0.0.31-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
