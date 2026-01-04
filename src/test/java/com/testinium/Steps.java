@@ -25,7 +25,7 @@ public class Steps {
     private final WebDriverWait wait;
 
     public Steps() {
-        this.driver = Hooks.driver;
+        this.driver = Hooks.getWebDriver();
         this.actions = new Actions(driver);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT_SEC), Duration.ofMillis(POLL_MS));
     }
