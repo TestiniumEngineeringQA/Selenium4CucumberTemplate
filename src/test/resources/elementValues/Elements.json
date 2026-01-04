@@ -23,5 +23,10 @@
     "key": "searchbar",
     "value": "//*[@id=\"twotabsearchtextbox\"]",
     "type": "xpath"
+  },
+  {
+    "key": "searchbarinput",
+    "value": "twotabsearchtextbox",
+    "type": "id"
   }
 ]

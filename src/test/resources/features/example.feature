@@ -4,7 +4,7 @@ Feature: Online Process
   Scenario: deneme02
     * "https://www.amazon.com.tr/" sayfasina git
     * 2 saniye bekle
-    * "searchbarerror" elementine tikla
+    * "searchbarinput" elementine tikla
     * 2 saniye bekle
-    * "searchbar" elementine "telefon" degerini yaz
+    * "searchbarinput" elementine "telefon" degerini yaz
     * 2 saniye bekle
