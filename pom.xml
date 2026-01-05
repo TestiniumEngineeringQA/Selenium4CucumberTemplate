@@ -25,7 +25,7 @@
     <!-- VERSIONS -->
     <maven.complier.version>3.7.0</maven.complier.version>
     <java.version>21</java.version>
-    <selenium.java.version>4.25.0</selenium.java.version>
+    <selenium.java.version>4.35.0</selenium.java.version>
     <commons.lang3.version>3.5</commons.lang3.version>
     <cucumber.junit.version>6.8.1</cucumber.junit.version>
     <cucumber.java8.version>6.8.1</cucumber.java8.version>
